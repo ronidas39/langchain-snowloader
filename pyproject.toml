@@ -5,12 +5,12 @@ build-backend = "hatchling.build"
 [project]
 name = "langchain-snowloader"
 version = "0.1.0"
-description = "ServiceNow document loaders for LangChain — load Incidents, CMDB, KB, Changes, Problems, and Catalog into LangChain Documents."
+description = "ServiceNow document loaders for LangChain - load Incidents, CMDB, KB, Changes, Problems, and Catalog into LangChain Documents."
 readme = "README.md"
 license = {text = "MIT"}
 requires-python = ">=3.10"
 authors = [
-    {name = "Roni Das", email = "roni@totaltechnologyzone.com"},
+    {name = "Roni Das", email = "thetotaltechnology@gmail.com"},
 ]
 keywords = [
     "servicenow", "langchain", "rag", "llm",

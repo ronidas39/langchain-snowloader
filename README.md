@@ -2,7 +2,7 @@
 
 ServiceNow document loaders for LangChain, powered by [snowloader](https://github.com/ronidas39/snowloader).
 
-Covers six core ServiceNow tables — Incidents, Knowledge Base, CMDB, Changes, Problems, and Service Catalog — with production-grade features like retry logic, delta sync, CMDB relationship traversal, and HTML cleaning.
+Covers six core ServiceNow tables - Incidents, Knowledge Base, CMDB, Changes, Problems, and Service Catalog - with production-grade features like retry logic, delta sync, CMDB relationship traversal, and HTML cleaning.
 
 ## Installation
 
@@ -75,7 +75,7 @@ loader = ServiceNowIncidentLoader(connection=conn)
 docs = loader.load()
 last_sync = datetime.now(timezone.utc)
 
-# Next run — only get changes
+# Next run - only get changes
 updated = loader.load_since(last_sync)
 ```
 
@@ -106,6 +106,10 @@ conn = SnowConnection(instance_url="...", client_id="...", client_secret="...",
 # Bearer Token
 conn = SnowConnection(instance_url="...", token="eyJhbG...")
 ```
+
+## Author
+
+Created and maintained by **[Roni Das](https://github.com/ronidas39)** - [thetotaltechnology@gmail.com](mailto:thetotaltechnology@gmail.com)
 
 ## Links
 
