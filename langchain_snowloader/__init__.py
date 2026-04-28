@@ -13,6 +13,7 @@ Usage:
 """
 
 from snowloader.adapters.langchain import (
+    ServiceNowAttachmentLoader,
     ServiceNowCatalogLoader,
     ServiceNowChangeLoader,
     ServiceNowCMDBLoader,
@@ -21,11 +22,37 @@ from snowloader.adapters.langchain import (
     ServiceNowProblemLoader,
 )
 
+# Async variants are re-exported when aiohttp is installed alongside snowloader.
+try:
+    from snowloader.adapters.langchain import (  # noqa: F401
+        AsyncServiceNowAttachmentLoader,
+        AsyncServiceNowCatalogLoader,
+        AsyncServiceNowChangeLoader,
+        AsyncServiceNowCMDBLoader,
+        AsyncServiceNowIncidentLoader,
+        AsyncServiceNowKBLoader,
+        AsyncServiceNowProblemLoader,
+    )
+
+    _ASYNC_EXPORTS = [
+        "AsyncServiceNowAttachmentLoader",
+        "AsyncServiceNowCatalogLoader",
+        "AsyncServiceNowChangeLoader",
+        "AsyncServiceNowCMDBLoader",
+        "AsyncServiceNowIncidentLoader",
+        "AsyncServiceNowKBLoader",
+        "AsyncServiceNowProblemLoader",
+    ]
+except ImportError:
+    _ASYNC_EXPORTS = []
+
 __all__ = [
+    "ServiceNowAttachmentLoader",
     "ServiceNowIncidentLoader",
     "ServiceNowKBLoader",
     "ServiceNowCMDBLoader",
     "ServiceNowChangeLoader",
     "ServiceNowProblemLoader",
     "ServiceNowCatalogLoader",
+    *_ASYNC_EXPORTS,
 ]
