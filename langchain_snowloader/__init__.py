@@ -1,7 +1,8 @@
 """ServiceNow document loaders for LangChain, powered by snowloader.
 
-Provides six loaders covering the core ServiceNow tables, each producing
-LangChain Documents ready for any vector store, retriever, or chain.
+Provides a loader for each of the core ServiceNow tables plus a generic one
+for everything else, each producing LangChain Documents ready for any vector
+store, retriever, or chain.
 
 Usage:
     from langchain_snowloader import ServiceNowIncidentLoader
@@ -20,6 +21,8 @@ from snowloader.adapters.langchain import (
     ServiceNowIncidentLoader,
     ServiceNowKBLoader,
     ServiceNowProblemLoader,
+    ServiceNowRelationshipLoader,
+    ServiceNowTableLoader,
 )
 
 # Async variants are re-exported when aiohttp is installed alongside snowloader.
@@ -54,5 +57,7 @@ __all__ = [
     "ServiceNowChangeLoader",
     "ServiceNowProblemLoader",
     "ServiceNowCatalogLoader",
+    "ServiceNowRelationshipLoader",
+    "ServiceNowTableLoader",
     *_ASYNC_EXPORTS,
 ]
