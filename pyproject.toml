@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "langchain-snowloader"
-version = "0.3.0"
+version = "0.6.0"
 description = "ServiceNow document loaders for LangChain - sync and async loaders for Incidents, CMDB, KB, Changes, Problems, Catalog, and Attachments."
 readme = "README.md"
 license = {text = "MIT"}
@@ -28,7 +28,7 @@ classifiers = [
 ]
 dependencies = [
     "langchain-core>=0.2.0",
-    "snowloader>=0.3.0",
+    "snowloader>=0.6.0",
 ]
 
 [project.optional-dependencies]
